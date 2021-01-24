@@ -4,7 +4,7 @@ Trabalhando com chaves assimétricas usando as bibliotecas:
 - NetDevPack.Security.JwtSigningCredentials.AspNetCore 
 - NetDevPack.Security.JwtSigningCredentials.Store.EntityFrameworkCore
 
-Com o uso de um JWKS podemos centralizar em um único enpoint nossa chave pública e privada, sendo que para acessar a chave a pública basta realizar a requisição adicionando a rota "/jwks". Em posse do endereço que contem a chave pública basta realizar o a configuração conforme códio abaixo:
+Com o uso de um JWKS podemos centralizar em um único enpoint nossa chave pública e privada, sendo que para acessar a chave a pública basta realizar a requisição adicionando a rota "/jwks". Já com o endereço que contem a chave pública em mãos é possível realizar o a configuração conforme códio abaixo:
 
 ```c#
 
@@ -20,3 +20,5 @@ services.AddAuthentication(x =>
 });
 
 ```
+
+Dessa forma não é preciso espalhar a chave em todas as API.
